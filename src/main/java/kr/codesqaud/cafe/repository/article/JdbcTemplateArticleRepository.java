@@ -92,7 +92,7 @@ public class JdbcTemplateArticleRepository implements ArticleRepository {
     }
 
     @Override
-    public Long count() {
+    public Long countUndeletedArticles() {
         String sql = "select count(*) from " + Tables.ARTICLES + " where deleted=:flag";
         return template.queryForObject(sql, Map.of("flag", false), Long.class);
     }

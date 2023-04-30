@@ -61,6 +61,6 @@ public class ArticleService {
     }
 
     public Long countArticles() {
-        return articleRepository.count();
+        return articleRepository.countUndeletedArticles();
     }
 }

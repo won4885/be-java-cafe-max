@@ -17,5 +17,5 @@ public interface ArticleRepository {
 
     void deleteArticle(Long id);
 
-    Long count();
+    Long countUndeletedArticles();
 }
